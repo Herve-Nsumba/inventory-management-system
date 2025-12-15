@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h2>Inventory Dashboard</h2>
+      <div>
+        <button id="themeToggle">🌓</button>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Search item..." />
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="Available">Available</option>
+        <option value="Out of Stock">Out of Stock</option>
+        <option value="Pending">Pending</option>
+      </select>
+    </section>
+
+    <form id="itemForm" class="item-form">
+      <input type="text" id="itemName" placeholder="Item name" required />
+      <input type="number" id="itemQty" placeholder="Quantity" required />
+      <input type="number" id="itemPrice" placeholder="Price" required />
+      <select id="itemStatus" required>
+        <option value="">Select status</option>
+        <option value="Available">Available</option>
+        <option value="Out of Stock">Out of Stock</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <button type="submit">Add Item</button>
+    </form>
+
+    <ul id="inventoryList" class="inventory-list"></ul>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

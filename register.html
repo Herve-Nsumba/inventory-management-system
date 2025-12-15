@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-left">
+          <h2>Register</h2>
+          <p class="subtitle">
+            Manage all your inventory efficiently. Let's get you set up to
+            begin.
+          </p>
+
+          <form id="registerForm">
+            <div class="row">
+              <input
+                type="text"
+                id="firstName"
+                placeholder="First name"
+                required
+              />
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Last name"
+                required
+              />
+            </div>
+
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="tel" id="phone" placeholder="Phone number" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <input class="terms" type="checkbox" required />
+            <label class="checkbox">
+              I agree to all terms, privacy policies, and fees
+            </label>
+
+            <button type="submit">Sign up</button>
+          </form>
+
+          <p class="switch">
+            Already have an account? <a href="login.html">Log in</a>
+          </p>
+
+          <p id="message"></p>
+        </div>
+
+        <div class="auth-two"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
