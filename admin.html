@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Admin Dashboard</h2>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+      <!-- ================= USERS MANAGEMENT ================= -->
+      <section class="section">
+        <h3>Manage Users</h3>
+        <ul id="userList">
+          <!-- Users injected by admin.js -->
+        </ul>
+      </section>
+
+      <!-- ================= INVENTORY MANAGEMENT ================= -->
+      <section class="section">
+        <h3>All Inventory Items</h3>
+
+        <!-- SEARCH -->
+        <input type="text" id="searchInput" placeholder="Search item by name" />
+
+        <!-- FILTER BY USER -->
+        <select id="userFilter">
+          <option value="">All Users</option>
+        </select>
+
+        <!-- FILTER BY STATUS -->
+        <select id="statusFilter">
+          <option value="">All Status</option>
+          <option value="Available">Available</option>
+          <option value="Out of Stock">Out of Stock</option>
+          <option value="Pending">Pending</option>
+        </select>
+
+        <!-- INVENTORY LIST -->
+        <ul id="inventoryList">
+          <!-- Inventory injected by admin.js -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -86,7 +86,11 @@ if (loginForm) {
     }
 
     localStorage.setItem("currentUser", JSON.stringify(user));
-    window.location.href = "inventory.html";
+    if (user.role === "admin") {
+      window.location.href = "admin.html";
+    } else {
+      window.location.href = "inventory.html";
+    }
   });
 }
 
